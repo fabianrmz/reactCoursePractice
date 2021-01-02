@@ -1,8 +1,8 @@
 import React from 'react';
 // import Radium from 'radium';
 
-import styled from 'styled-components';
-// import './Person.css';
+//import styled from 'styled-components';
+import classes from './Person.css';
 
 // class Person extends Component {
 //     render(){
@@ -11,39 +11,41 @@ import styled from 'styled-components';
 //         );
 //     }
 // }
-const StyledDiv = styled.div`
-    width: 60%;
-    margin: 16px auto;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 3px #ccc;
-    padding: 16px;
-    text-align: center;
-    cursor: pointer;
-    :hover {
-        background-color: grey;
+// const StyledDiv = styled.div`
+//     width: 60%;
+//     margin: 16px auto;
+//     border: 1px solid #eee;
+//     box-shadow: 0 2px 3px #ccc;
+//     padding: 16px;
+//     text-align: center;
+//     cursor: pointer;
+//     :hover {
+//         background-color: grey;
         
-    }
+//     }
 
-    @media (min-width: 500px) {
-        width: 450px;
-    }
-    `;
+//     @media (min-width: 500px) {
+//         width: 450px;
+//     }
+//     `;
 
 const person = (props) => {
 
-    const style = {
-        '@media (min-width: 500px)': {
-            width: '450px'
-        }
-    };
+    // const style = {
+    //     '@media (min-width: 500px)': {
+    //         width: '450px'
+    //     }
+    // };
 
     return(
         // <div className="Person" style={style}>
-        <StyledDiv>
-            <p onClick={props.click}> Im {props.name} and i am {props.age} years old</p>
-            <input type="text" onChange={props.changed} value={props.name}/>
+        <div className={classes.Person}>
+            <p onClick={props.click}> 
+            Im {props.name} and i am {props.age} years old
+            </p>
             <p>{props.children}</p>
-        </StyledDiv>
+            <input type="text" onChange={props.changed} value={props.name}/>
+        </div>
             
         
     )
