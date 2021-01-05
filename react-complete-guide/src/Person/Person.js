@@ -3,6 +3,8 @@ import React from 'react';
 
 //import styled from 'styled-components';
 import classes from './Person.css';
+//when you dont run the command npm run eject you can easily do it like this -> import classes from './Person.module.css';
+//      
 
 // class Person extends Component {
 //     render(){
@@ -30,6 +32,11 @@ import classes from './Person.css';
 //     `;
 
 const person = (props) => {
+
+    const rnd = Math.random();
+    if (rnd > 0.7 ) {
+        throw new Error(' Somwthing went wrong')
+    }
 
     // const style = {
     //     '@media (min-width: 500px)': {
